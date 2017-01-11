@@ -118,6 +118,8 @@ int main(int argc, char* argv[])
 	all_paths.push_back(R"(lib\x64\Release)");
 	all_paths.push_back(R"(lib\x32\Debug)");
 	all_paths.push_back(R"(lib\x32\Release)");
+	all_paths.push_back(R"(inc)");
+	all_paths.push_back(R"(src)");
 
 	for (auto& path : all_paths)
 	{

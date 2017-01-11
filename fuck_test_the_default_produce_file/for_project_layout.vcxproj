@@ -94,10 +94,12 @@
             <Optimization>Disabled</Optimization>
             <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
             <SDLCheck>true</SDLCheck>
+            <SuppressStartupBanner>false</SuppressStartupBanner>
         </ClCompile>
         <Link>
             <SubSystem>Console</SubSystem>
             <GenerateDebugInformation>true</GenerateDebugInformation>
+            <AdditionalLibraryDirectories>$(ProjectDir)lib\$(Platform)\$(Configuration)\</AdditionalLibraryDirectories>
         </Link>
         <BuildLog>
             <Path>$(SolutionDir)build\$(Platform)\$(Configuration)\BuildLog\$(MSBuildProjectName).log</Path>
@@ -111,11 +113,13 @@
             <Optimization>Disabled</Optimization>
             <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
             <SDLCheck>true</SDLCheck>
+            <SuppressStartupBanner>false</SuppressStartupBanner>
         </ClCompile>
         <Link>
             <SubSystem>Console</SubSystem>
             <GenerateDebugInformation>true</GenerateDebugInformation>
             <AdditionalDependencies>tinyxml2.lib;%(AdditionalDependencies)</AdditionalDependencies>
+            <AdditionalLibraryDirectories>$(ProjectDir)lib\$(Platform)\$(Configuration)\</AdditionalLibraryDirectories>
         </Link>
         <BuildLog>
             <Path>$(SolutionDir)build\$(Platform)\$(Configuration)\BuildLog\$(MSBuildProjectName).log</Path>
@@ -131,12 +135,14 @@
             <IntrinsicFunctions>true</IntrinsicFunctions>
             <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
             <SDLCheck>true</SDLCheck>
+            <SuppressStartupBanner>false</SuppressStartupBanner>
         </ClCompile>
         <Link>
             <SubSystem>Console</SubSystem>
             <EnableCOMDATFolding>true</EnableCOMDATFolding>
             <OptimizeReferences>true</OptimizeReferences>
             <GenerateDebugInformation>true</GenerateDebugInformation>
+            <AdditionalLibraryDirectories>$(ProjectDir)lib\$(Platform)\$(Configuration)\</AdditionalLibraryDirectories>
         </Link>
         <BuildLog>
             <Path>$(SolutionDir)build\$(Platform)\$(Configuration)\BuildLog\$(MSBuildProjectName).log</Path>
@@ -152,12 +158,14 @@
             <IntrinsicFunctions>true</IntrinsicFunctions>
             <PreprocessorDefinitions>NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
             <SDLCheck>true</SDLCheck>
+            <SuppressStartupBanner>false</SuppressStartupBanner>
         </ClCompile>
         <Link>
             <SubSystem>Console</SubSystem>
             <EnableCOMDATFolding>true</EnableCOMDATFolding>
             <OptimizeReferences>true</OptimizeReferences>
             <GenerateDebugInformation>true</GenerateDebugInformation>
+            <AdditionalLibraryDirectories>$(ProjectDir)lib\$(Platform)\$(Configuration)\</AdditionalLibraryDirectories>
         </Link>
         <BuildLog>
             <Path>$(SolutionDir)build\$(Platform)\$(Configuration)\BuildLog\$(MSBuildProjectName).log</Path>

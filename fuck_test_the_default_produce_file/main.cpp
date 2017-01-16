@@ -68,6 +68,14 @@ void traverse_xml(XMLElement* root)
 		new_node->LinkEndChild(new_text);
 		root->InsertEndChild(new_node);
 	}
+
+	if (rootName == "PreprocessorDefinitions")
+	{
+		std::string root_text = root->GetText();
+		std::string new_root_text{ "_CRT_SECURE_NO_WARNINGS;" };
+		std::string final_root_text = new_root_text + root_text;
+		root->SetText(final_root_text.c_str());
+	}
 	
 	XMLElement* child = root->FirstChildElement();
 	if (child != nullptr)
@@ -135,8 +143,8 @@ int main(int argc, char* argv[])
 
 	tinyxml2::XMLDocument doc;
 	doc.LoadFile(argv[1]);
-	XMLElement* root = doc.RootElement();
-	traverse_xml(root);
+	 XMLElement* root = doc.RootElement();
+	 traverse_xml(root);
 	doc.SaveFile(argv[1]);
 
 	return 0;
